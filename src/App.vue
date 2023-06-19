@@ -1,10 +1,27 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <div class="container-fluid px-0">
+    <div class="row">
+      <Header />
+      <Navbar />
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <router-view />
+      </main>
+    </div>
+  </div>
 </template>
+
+<script>
+import Header from './components/Header.vue'
+import Navbar from './components/Navbar.vue'
+
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Navbar
+  }
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -13,18 +30,5 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
 }
 </style>
