@@ -1,8 +1,8 @@
 <template>
-  <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+  <nav id="sidebarMenu" class="col-md-2 col-lg-2 d-md-block bg-light sidebar collapse">
     <div class="position-sticky pt-3">
       <ul class="nav flex-column">
-        <li class="p-1" v-for="(menu, i) in menuData" :key="i">
+        <li class="active" v-for="(menu, i) in menuData" :key="i">
             <router-link class="nav-link" :to="menu.path">{{ menu.name }}</router-link>
           </li>
       </ul>
@@ -42,9 +42,11 @@ export default {
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 a{
+  padding: 20px 0;
   color: #666;
 }
 a:hover{
-  color:#0d6efd
+  color:#fff;
+  background-color: #0d6efd;
 }
 </style>

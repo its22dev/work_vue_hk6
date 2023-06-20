@@ -1,23 +1,102 @@
 <template>
-  <div
-    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Dashboard</h1>
-    <div class="btn-toolbar mb-2 mb-md-0">
-      <div class="btn-group me-2">
-        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-      </div>
-      <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="feather feather-calendar">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-          <line x1="16" y1="2" x2="16" y2="6"></line>
-          <line x1="8" y1="2" x2="8" y2="6"></line>
-          <line x1="3" y1="10" x2="21" y2="10"></line>
-        </svg>
-        This week
-      </button>
+  <div>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">Dashboard</h1>
     </div>
+    <h3 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+      Overview
+    </h3>
+    <div class="row row-cols-4">
+      <div class="col">
+        <div class="card text-white bg-secondary mb-3">
+          <div class="card-body">
+            <h5 class="card-title">99</h5>
+            <p class="card-text">訂單生成</p>
+          </div>
+          <div class="card-footer">查看</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-success mb-3">
+          <div class="card-body">
+            <h5 class="card-title">17</h5>
+            <p class="card-text">付款成功</p>
+          </div>
+          <div class="card-footer">查看</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-danger mb-3">
+          <div class="card-body">
+            <h5 class="card-title">3</h5>
+            <p class="card-text">付款失敗</p>
+          </div>
+          <div class="card-footer">查看</div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card text-white bg-primary mb-3">
+          <div class="card-body">
+            <h5 class="card-title">5</h5>
+            <p class="card-text">新會員加入</p>
+          </div>
+          <div class="card-footer">查看</div>
+        </div>
+      </div>
+    </div>
+    <h3 class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3">
+      Order
+    </h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">訂單號</th>
+          <th scope="col">訂購人</th>
+          <th scope="col">金額</th>
+          <th scope="col"> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="item in Order">
+          <th scope="row">{{ item.id }}</th>
+          <td>{{ item.name }}</td>
+          <td>{{ item.price }}</td>
+          <td><button type="button" class="btn btn-light btn-sm">View</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </template>
+
+<style>
+.card-title {
+  font-size: 36px;
+}
+</style>
+
+<script>
+export default {
+  data() {
+    return {
+      Order: [
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '76542', price: '100', name: '測試用戶' },
+        { id: '176542', price: '100', name: '測試用戶' },
+        { id: '176542', price: '100', name: '測試用戶' },
+        { id: '176542', price: '100', name: '測試用戶' },
+        { id: '176542', price: '100', name: '測試用戶' },
+        { id: '176542', price: '100', name: '測試用戶' },
+        { id: '176542', price: '100', name: '測試用戶' },
+      ],
+
+    }
+  }
+}
+</script>
