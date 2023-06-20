@@ -3,7 +3,8 @@
     <div class="row">
       <Header />
       <Navbar />
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <subNav />
+      <main class="px-md-4">
         <router-view />
       </main>
     </div>
@@ -13,12 +14,14 @@
 <script>
 import Header from './components/Header.vue'
 import Navbar from './components/Navbar.vue'
+import subNav from './components/subNav.vue'
 
 export default {
   name: 'App',
   components: {
     Header,
-    Navbar
+    Navbar,
+    subNav
   }
 }
 </script>

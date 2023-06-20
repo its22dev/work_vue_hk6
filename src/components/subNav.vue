@@ -1,17 +1,16 @@
 <template>
-  <header class="navbar sticky-top bg-light flex-md-nowrap shadow text-center">
+  <header class="navbar sticky-top my-3">
     <span></span>
-    <ul class="nav navbar-light bg-light">
+    <ul class="nav nav-pills">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">香港六合彩</a>
+        <a class="nav-link active" aria-current="page" href="#">總公司</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">台灣大樂透</a>
+        <a class="nav-link" href="#">分公司</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">澳門六合彩</a>
+        <a class="nav-link" href="#">股東</a>
       </li>
-      
     </ul>
     <span></span>
   </header>
